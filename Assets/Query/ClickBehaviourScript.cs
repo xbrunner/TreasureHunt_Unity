@@ -20,6 +20,7 @@ public class ClickBehaviourScript : MonoBehaviour, IInputClickHandler
     public Mesh open; // Treasure is open
 
 
+
     public void OnInputClicked(InputClickedEventData eventData)
     {
         // Make the cube darker
@@ -80,12 +81,17 @@ public class ClickBehaviourScript : MonoBehaviour, IInputClickHandler
                     }
 
                     infotext.enabled = true; // Reset LeaderBoard in cas it has disappear
-                    infotext.GetComponent<TextMeshPro>().SetText(infoTextStr);
                     GetComponent<MeshFilter>().sharedMesh = open; // Open treasure
+                    yield return new WaitForSeconds(1); // Wait 1 sec to open the treasure
 
+                    infotext.GetComponent<TextMeshPro>().SetText(infoTextStr);
                     yield return new WaitForSeconds(5); // Make the LeaderBoard disappear after 5 seconds
+
                     infotext.enabled = false; // LeaderBoard Disappear
+
+                    yield return new WaitForSeconds(1); // Wait 1 sec to close the treasure
                     GetComponent<MeshFilter>().sharedMesh = close; // Close treasure
+                    
 
 
                     //GetComponent<Renderer>().material.color = new Color32(5, 191, 0, 100);
@@ -110,6 +116,7 @@ public class ClickBehaviourScript : MonoBehaviour, IInputClickHandler
     void Update() {
         // Leaderboard follow position of Hololens Cursor
         var camPos = Camera.main.transform.position + Camera.main.transform.forward;
+
         infotext.transform.position = camPos;
         infotext.transform.localScale = Vector3.one *0.5f;
 
