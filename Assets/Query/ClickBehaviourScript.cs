@@ -117,8 +117,10 @@ public class ClickBehaviourScript : MonoBehaviour, IInputClickHandler
         // Leaderboard follow position of Hololens Cursor
         var camPos = Camera.main.transform.position + Camera.main.transform.forward;
 
+        // Update position of leaderboard
         infotext.transform.position = camPos;
-        infotext.transform.localScale = Vector3.one *0.5f;
+        infotext.transform.rotation = Camera.main.transform.rotation;
+        infotext.transform.localScale = Vector3.one *0.4f;
 
     }
 
