@@ -19,6 +19,7 @@ public class RotateTreasureName : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Adapt treasure labels to camera position (Hololense cursor)
         var rotCamera = Camera.main.transform.rotation;
         benthselaminian.transform.rotation = rotCamera;
         staff.transform.rotation = rotCamera;

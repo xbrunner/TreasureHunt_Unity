@@ -112,6 +112,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &152576895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000010387986644, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_Name
+      value: LeaderboardBG
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010387986644, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07323986
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.010427271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012502930144, guid: c92fdeb990439954893510a31e925383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c92fdeb990439954893510a31e925383, type: 3}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +546,7 @@ MonoBehaviour:
   treasureName: Staff+of+the+Forlorn+Traveler
   textPrefab: {fileID: 1597886884700172442, guid: 75259dd3b360ead4fbfcff0094c6cb7d,
     type: 3}
+  leaderboardBackground: {fileID: 1008352574}
   close: {fileID: 4300000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
   open: {fileID: 4300000, guid: 5c509bc9e3ce92e418aac359ebdf4281, type: 3}
 --- !u!65 &565534409
@@ -498,7 +560,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 3}
+  m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &565534412 stripped
 Transform:
@@ -791,7 +853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -90.4
+      value: -84.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -843,6 +905,12 @@ PrefabInstance:
       objectReference: {fileID: 4300000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
+--- !u!1 &1008352574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010387986644, guid: c92fdeb990439954893510a31e925383,
+    type: 3}
+  m_PrefabInstance: {fileID: 152576895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1015012271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -939,6 +1007,7 @@ MonoBehaviour:
   treasureName: Common+Tavern+Ale
   textPrefab: {fileID: 1597886884700172442, guid: 75259dd3b360ead4fbfcff0094c6cb7d,
     type: 3}
+  leaderboardBackground: {fileID: 1008352574}
   close: {fileID: 4300000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
   open: {fileID: 4300000, guid: 5c509bc9e3ce92e418aac359ebdf4281, type: 3}
 --- !u!65 &1098708609
@@ -952,7 +1021,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 3}
+  m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1098708612 stripped
 Transform:
@@ -1129,6 +1198,7 @@ MonoBehaviour:
   treasureName: Bethselaminian+Backpack
   textPrefab: {fileID: 1597886884700172442, guid: 75259dd3b360ead4fbfcff0094c6cb7d,
     type: 3}
+  leaderboardBackground: {fileID: 1008352574}
   close: {fileID: 4300000, guid: 4b1205a7235860c479fc94aefe26ebf1, type: 3}
   open: {fileID: 4300000, guid: 5c509bc9e3ce92e418aac359ebdf4281, type: 3}
 --- !u!65 &1682028874
@@ -1142,7 +1212,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 3}
+  m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1720282885
 GameObject:
